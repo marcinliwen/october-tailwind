@@ -1,0 +1,93 @@
+##
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        {% partial 'site/head/head-meta' %}
+        <title>October CMS - {{ this.page.meta_title ?: placeholder('pageTitle') }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        {% partial 'site/head/head-links' %}
+        {% partial 'site/head/head-scripts' %}
+        {% partial 'site/head/analytics-code' %}
+        <meta name="turbo-visit-control" content="reload" />
+    </head>
+    <body >
+
+        <section>
+            <div class="container">
+              <h1 class="italic">H1 Light</h1>
+              <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+              <h1 class="font-semibold">H1 Semi bold</h1>
+              <h1 class="font-semibold">Lorem ipsum dolor sit amet consectetur.</h1>
+              <br />
+              <h1>
+                Rent, drive, <span class="font-semibold text-green-300">enjoy!</span>
+              </h1>
+              <h1>YALLACARS <span class="font-semibold">Women</span></h1>
+              <br />
+              <h1 class="font-semibold">Wynajem skuterów</h1>
+              <br />
+
+              <h2>H2 light</h2>
+              <h2 class="font-semibold">H2 Semi Bold</h2>
+              <br />
+
+              <h2>
+                <span class="font-semibold">Zarejestruj się</span> i ruszaj w trasę
+              </h2>
+              <br />
+              <h3>H3 light</h3>
+              <h3 class="font-semibold">H3 Semi Bold</h3>
+              <br />
+              <h3 class="font-semibold">Legalnie i bez stresu</h3>
+              <br />
+              <h4>H4 subtitle</h4>
+              <br />
+              <h4 class="font-semibold">Wypełnij formularz i wybierz Partnera</h4>
+              <br />
+              <p>Paragraph</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Tristique lectus mattis id
+                mollis. Arcu in velit ornare venenatis egestas consectetur vulputate
+                arcu. At sed dignissim viverra montes egestas. Tellus leo amet
+                bibendum tempor sem sed pellentesque lorem fermentum.
+              </p>
+              <br />
+              <p class="big">Paragraph BIG</p>
+              <p class="big">
+                Lorem ipsum dolor sit amet consectetur. Tristique lectus mattis id
+                mollis. Arcu in velit ornare venenatis egestas consectetur vulputate
+                arcu. At sed dignissim viverra montes egestas. Tellus leo amet
+                bibendum tempor sem sed pellentesque lorem fermentum.
+              </p>
+              <br />
+              <p class="footer">Paragraph Stopka</p>
+              <p class="footer">
+                Lorem ipsum dolor sit amet consectetur. Tristique lectus mattis id
+                mollis. Arcu in velit ornare venenatis egestas consectetur vulputate
+                arcu. At sed dignissim viverra montes egestas. Tellus leo amet
+                bibendum tempor sem sed pellentesque lorem fermentum.
+              </p>
+              <br />
+              <p class="caption">Paragraph Caption</p>
+              <p class="caption">
+                Lorem ipsum dolor sit amet consectetur. Tristique lectus mattis id
+                mollis. Arcu in velit ornare venenatis egestas consectetur vulputate
+                arcu. At sed dignissim viverra montes egestas. Tellus leo amet
+                bibendum tempor sem sed pellentesque lorem fermentum.
+              </p>
+              <br />
+              <p class="link">Paragraph Link</p>
+              <p class="link">
+                Lorem ipsum dolor sit amet consectetur. Tristique lectus mattis id
+                mollis. Arcu in velit ornare venenatis egestas consectetur vulputate
+                arcu. At sed dignissim viverra montes egestas. Tellus leo amet
+                bibendum tempor sem sed pellentesque lorem fermentum.
+              </p>
+            </div>
+          </section>
+
+    </body>
+</html>
