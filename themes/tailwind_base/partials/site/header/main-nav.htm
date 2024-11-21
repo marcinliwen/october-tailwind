@@ -1,0 +1,88 @@
+{% set links = [
+  { url: "/", name: "O nas" },
+  { url: "/", name: "Pracuj z nami" },
+  { url: "/", name: "Nasza oferta" },
+  { url: "/", name: "Blog" },
+  { url: "/", name: "FAQ" },
+  { url: "/", name: "kontakt" },
+
+]
+%}
+
+  <div class="main-nav main-menu ">
+    <button id="close-menu" class="absolute top-6 right-6 md:hidden"
+      ><svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_403_13907)">
+          <path
+            d="M23.5 0.5L0.5 23.5"
+            stroke="#1A1A1A"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M23.5 23.5L0.5 0.5"
+            stroke="#1A1A1A"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_403_13907">
+            <rect width="24" height="24" fill="white"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+    </button>
+    <nav
+      class="md:flex h-full bg-grey-300 md:bg-transparent rounded-t-[40px]"
+    >
+      <ul class="md:flex xl:gap-7 px-6 py-4 bg-grey-300 backdrop-blur-sm rounded-t-[40px] md:rounded-[200px] md:max-w-max  md:ml-auto md:mr-3">
+        {% for link in links %}
+
+              <li>
+                <a
+                  href={{link.url}}
+                  class="grid items-center align-middle p-light h-10 px-4 lg:hover:bg-green-200 active:bg-green-400 lg:hover:text-black active:text-black duration-300 rounded-[200px]"
+                >
+                  {{link.name}}
+                </a>
+              </li>
+
+        {% endfor%}
+      </ul>
+      <LanguageSwitch />
+
+    </nav>
+  </div>
+  <button
+    id="open-menu"
+    class="md:hidden flex gap-1 h-12 w-14 items-center justify-center -mr-4"
+  >
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M23.1411 5.81055H0.858887"
+        stroke="#e6e6e6"
+        stroke-linecap="round"
+        stroke-linejoin="round"></path>
+      <path
+        d="M23.1411 12H0.858887"
+        stroke="#e6e6e6"
+        stroke-linecap="round"
+        stroke-linejoin="round"></path>
+      <path
+        d="M23.1411 18.1895H0.858887"
+        stroke="#e6e6e6"
+        stroke-linecap="round"
+        stroke-linejoin="round"></path>
+    </svg>
+  </button>
