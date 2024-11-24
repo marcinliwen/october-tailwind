@@ -1,0 +1,75 @@
+==
+
+==
+
+{% set blog = [1, 2, 3, 4,5,6] %}
+
+<section class="py-24 bg-grey-400">
+    <div class="container wrapper">
+        <div class="max-w-[1128px] mx-auto">
+            <div class="flex items-center mb-10">
+                <h2>Sprawdź, co nowego na <span class="font-semibold">blogu</span></h2>
+                <div class="swiper-blog-nav ml-auto">
+                    <button class="swiper-blog-prev mr-8">
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="56" height="56" rx="28" fill="white" fill-opacity="0.1" />
+                            <g clip-path="url(#clip0_728_1684)">
+                                <path d="M16.7279 27.9707L39.2139 27.9707" stroke="white" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M28.7139 16.9707L17.0709 27.2197C16.9645 27.3135 16.8792 27.429 16.8209 27.5583C16.7625 27.6876 16.7323 27.8278 16.7323 27.9697C16.7323 28.1116 16.7625 28.2518 16.8209 28.3811C16.8792 28.5105 16.9645 28.6259 17.0709 28.7197L28.7139 38.9707"
+                                    stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_728_1684">
+                                    <rect width="24" height="24" fill="white"
+                                        transform="translate(39.9707 39.9707) rotate(-180)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </button>
+                    <button class="swiper-blog-next">
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="56" height="56" rx="28" fill="white" fill-opacity="0.1" />
+                            <g clip-path="url(#clip0_728_1688)">
+                                <path d="M39.2135 27.9707H16.7275" stroke="white" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M27.2275 38.9707L38.8705 28.7217C38.9769 28.6279 39.0622 28.5125 39.1205 28.3831C39.1789 28.2538 39.2091 28.1136 39.2091 27.9717C39.2091 27.8298 39.1789 27.6896 39.1205 27.5603C39.0622 27.431 38.9769 27.3155 38.8705 27.2217L27.2275 16.9707"
+                                    stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_728_1688">
+                                    <rect width="24" height="24" fill="white" transform="translate(15.9707 15.9707)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </button>
+                </div>
+            </div>
+
+            <div class="swiper swiper_blog mb-10">
+                <div class="swiper-wrapper">
+                    {% for item in blog %}
+                    <div class="swiper-slide">
+                        <article
+                            class="rounded-[32px] bg-grey-300 min-h-[360px]  grid grid-rows-[auto_1fr_auto] overflow-hidden">
+                            <img src="{{'assets/images/follow_car.jpeg'|theme}}" />
+                            <div class="p-6">
+                            <h4 class="mb-2 mt-auto">Lorem ipsum dolor sit lorem amet consectetur. </h4>
+                            <p class="caption mb-2">dolor sit amet consectetur. Id cras ac bibendum ullamcorper a pulvinar lobortis.</p>
+                            <a class="text-green-300 underline cursor-pointer">Czytaj więcej</a>
+                            </div>
+                        </article>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% partial 'utils/button.htm' version="primary" type="link" classes="mx-auto" body %}
+            Dowiedz się więcej
+            {% endpartial %}
+        </div>
+    </div>
+</section>

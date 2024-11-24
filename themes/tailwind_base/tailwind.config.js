@@ -7,6 +7,12 @@ module.exports = {
     "./resources/**/*.js",
 "./assets/**/*.css"],
   theme: {
+    container: {
+        center: true,
+        screens: {
+          xl: "1440px",
+        },
+      },
     extend: {
         colors: {
             green: {
@@ -16,10 +22,13 @@ module.exports = {
             },
             grey: {
                 100: '#BEBEBF',
+                200: '#d1d1d1',
                 300: '#353535',
-                400: '#2F2F2F'
-
+                400: '#2F2F2F',
+                500: '#3A3A3A',
+                900: '#4d4d4d'
             },
+
             black: '#1a1a1a'
 
         }

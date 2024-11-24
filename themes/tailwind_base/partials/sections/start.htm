@@ -1,0 +1,58 @@
+<section class="bg-grey-400 py-16">
+    <div class="container">
+      <div class="max-w-[1130px] mx-auto">
+        <h2 class="mb-10 text-center">
+          Czego potrzebujesz aby <span class="font-semibold">zacząć?</span>
+        </h2>
+        <div class="grid gap-8">
+            {% partial 'utils/card.htm' version="full-w" type="primary" body%}
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="number md:col-span-3">01</div>
+                <h3 class="md:col-span-1">Subheading one</h3>
+                <p class="md:col-span-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros elementum tristique.
+                </p>
+              </div>
+            {% endpartial %}
+            {% partial 'utils/card.htm' version="full-w" type="secondary" body%}
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="number md:col-span-3">02</div>
+                <h3 class="md:col-span-1">Subheading two</h3>
+                <p class="md:col-span-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros elementum tristique.
+                </p>
+              </div>
+            {% endpartial %}
+            {% partial 'utils/card.htm' version="full-w" type="secondary" body%}
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="number md:col-span-3">03</div>
+                <h3 class="md:col-span-1">Subheading two</h3>
+                <p class="md:col-span-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros elementum tristique.
+                </p>
+              </div>
+            {% endpartial %}
+            {% partial 'utils/card.htm' version="full-w" type="secondary" body%}
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="number md:col-span-3">04</div>
+                <h3 class="md:col-span-1">Subheading two</h3>
+                <p class="md:col-span-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros elementum tristique.
+                </p>
+              </div>
+            {% endpartial %}
+
+
+        </div>
+        {% partial 'utils/button.htm' version="primary" type="link" classes="mx-auto mt-10" body %}
+        Pracuj z nami
+        {% endpartial %}
+
+      </div>
+
+    </div>
+  </section>

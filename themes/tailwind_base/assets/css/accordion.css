@@ -1,0 +1,79 @@
+.accordion-content {
+    grid-row-start: 2;
+    overflow: hidden;
+    max-height: 0;
+    cursor: unset;
+    transition-duration: 400ms;
+    transition-timing-function: cubic-bezier(0.53, 0, 0.43, 1);
+}
+
+.accordion-item {
+    position: relative;
+    display: grid;
+    overflow: hidden;
+    grid-template-rows: 1fr auto;
+}
+
+.accordion input:checked+.accordion-item>.accordion-content {
+    max-height: 100vh;
+    padding-bottom: 60px;
+}
+
+.accordion-close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    opacity: 0;
+    z-index: 100;
+}
+
+.accordion input:checked+.accordion-item>.accordion-close {
+    display: inline-block;
+}
+
+.acccordion-icon {
+    transition: transform 300ms cubic-bezier(0.53, 0, 0.43, 1);
+}
+
+.accordion input:checked+.accordion-item>.accordion-title>.acccordion-icon {
+    transform: rotate(90deg);
+}
+
+.accordion input {
+    display: none;
+}
+
+
+/* stack */
+
+:root {
+    --accordion-animation-duration: 0.7s;
+    /* продолжительность анимации в секундах */
+}
+
+.zeroAccordion {
+    position: relative;
+    height: 0px;
+    transition: all var(--accordion-animation-duration) ease;
+}
+
+.uc-slide {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: 0;
+    height: fit-content;
+    transition: all var(--accordion-animation-duration) ease;
+}
+
+.stack-arrow svg {
+    transition: transform var(--accordion-animation-duration) ease;
+}
+
+.expended .stack-arrow svg {
+    transform: rotateZ(90deg);
+}

@@ -1,0 +1,26 @@
+{% if type == "button" %}
+<button class="btn {{version ? version }} {{classes ? classes}}">{{body|raw}}</button>
+{% elseif type == "link" %}
+
+<a href="{{link}}" class="flex items-center max-w-max  gap-1 btn-arrow {{classes ? classes}}" >
+    <span class="btn {{version ? version }} ">{{body|raw}}</span>
+
+        {% if noArrow == 'true' %}
+        {% else %}
+        <span class="h-[56px] w-[56px] rounded-full bg-grey-400 flex justify-center items-center arrow">
+        <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_704_5456)">
+            <path d="M25.4206 9.0209L9.52055 24.9209" stroke="#BEBEBF" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M24.7234 25.2741L25.7091 9.79414C25.7179 9.65254 25.6966 9.51068 25.6464 9.37796C25.5963 9.24525 25.5185 9.12473 25.4181 9.02441C25.3178 8.92409 25.1973 8.84626 25.0646 8.7961C24.9319 8.74594 24.79 8.7246 24.6484 8.73348L9.16701 9.71777" stroke="#BEBEBF" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_704_5456">
+            <rect width="24" height="24" fill="white" transform="translate(0.5 16.9707) rotate(-45)"/>
+            </clipPath>
+            </defs>
+            </svg>
+        </span>
+
+        {% endif %}
+</a>
+{% endif %}

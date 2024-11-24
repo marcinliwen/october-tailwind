@@ -38,9 +38,9 @@
       </svg>
     </button>
     <nav
-      class="md:flex h-full bg-grey-300 md:bg-transparent rounded-t-[40px]"
+      class="md:flex h-full  md:bg-transparent "
     >
-      <ul class="md:flex xl:gap-7 px-6 py-4 bg-grey-300 backdrop-blur-sm rounded-t-[40px] md:rounded-[200px] md:max-w-max  md:ml-auto md:mr-3">
+      <ul class="md:flex xl:gap-7 px-6 py-4 bg-grey-900/50 backdrop-blur-sm rounded-[40px] md:rounded-[200px] md:max-w-max  mx-8 mb-10 md:mb-0 md:ml-auto md:mr-3">
         {% for link in links %}
 
               <li>
@@ -54,7 +54,7 @@
 
         {% endfor%}
       </ul>
-      <LanguageSwitch />
+      {% partial 'site/header/lang-switch.htm' %}
 
     </nav>
   </div>

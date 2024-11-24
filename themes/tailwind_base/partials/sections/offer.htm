@@ -1,0 +1,39 @@
+<section class="py-16">
+    <div class="container">
+      <h2 class="text-center mb-10">
+        <span class="font-semibold">Zobacz</span>, naszą ofertę
+      </h2>
+      <div
+        class="flex flex-wrap max-w-[1137px] mx-auto xl:grid xl:grid-cols-3 gap-6 mb-10 justify-center"
+      >
+      {% partial 'utils/card.htm' type="primary" body%}
+          <div class="number mb-11">01</div>
+          <h4 class="mb-4">Lorem ipsum dolor sit amet consectetur.</h4>
+          <p class="big mt-auto">
+            Lorem ipsum dolor sit amet consectetur. Tempus amet ligula
+            parturient sem dictum maecenas urna.
+          </p>
+       {% endpartial %}
+       {% partial 'utils/card.htm' type="secondary" body%}
+                 <div class="number mb-11">01</div>
+          <h4 class="mb-4">Lorem ipsum dolor sit amet consectetur.</h4>
+          <p class="big mt-auto">
+            Lorem ipsum dolor sit amet consectetur. Tempus amet ligula
+            parturient sem dictum maecenas urna.
+          </p>
+        {% endpartial %}
+       {% partial 'utils/card.htm' type="secondary" body%}
+          <div class="number mb-11">01</div>
+          <h4 class="mb-4">Lorem ipsum dolor sit amet consectetur.</h4>
+          <p class="big mt-auto">
+            Lorem ipsum dolor sit amet consectetur. Tempus amet ligula
+            parturient sem dictum maecenas urna.
+          </p>
+          {% endpartial %}
+      </div>
+      {% partial 'utils/button.htm' version="primary" type="link" classes="mx-auto" body %}
+      Dowiedz się więcej
+      {% endpartial %}
+
+    </div>
+  </section>

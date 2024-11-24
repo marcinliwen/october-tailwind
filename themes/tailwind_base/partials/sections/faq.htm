@@ -1,0 +1,84 @@
+{% set category_1 = [
+{
+title: "Doświadczenie i Ekspertyza",
+description:
+"Oferujemy ogromne doświadczenie i głęboką wiedzę w analizie trendów rynkowych, nieruchomości i strategiach rozwoju, co
+pozwala partnerom podejmować skuteczne decyzje inwestycyjne.",
+},
+{
+title: "Unikalne Lokalizacje",
+description:
+"Oferujemy ogromne doświadczenie i głęboką wiedzę w analizie trendów rynkowych, nieruchomości i strategiach rozwoju, co
+pozwala partnerom podejmować skuteczne decyzje inwestycyjne.",
+},
+{
+title: "Zróżnicowany Portfel",
+description:
+"Oferujemy ogromne doświadczenie i głęboką wiedzę w analizie trendów rynkowych, nieruchomości i strategiach rozwoju, co
+pozwala partnerom podejmować skuteczne decyzje inwestycyjne.",
+},
+{
+title: "Wsparcie i Doradztwo",
+description:
+"Oferujemy ogromne doświadczenie i głęboką wiedzę w analizie trendów rynkowych, nieruchomości i strategiach rozwoju, co
+pozwala partnerom podejmować skuteczne decyzje inwestycyjne.",
+},
+{
+title: "Innowacyjność i Zrównoważony Rozwój",
+description:
+"Oferujemy ogromne doświadczenie i głęboką wiedzę w analizie trendów rynkowych, nieruchomości i strategiach rozwoju, co
+pozwala partnerom podejmować skuteczne decyzje inwestycyjne.",
+},
+]
+%}
+
+
+<section class="py-28">
+    <div class="container flex flex-wrap lg:flex-nowrap gap-10 lg:gap-0">
+        <div class="max-w-[472px] lg:mr-[100px]">
+            <h2 class="mb-6">
+                Masz pytania? Sprawdź nasze <span class="font-semibold">FAQ!</span>
+            </h2>
+            <p class="big mb-10">
+                Dowiedz się, jak rozpocząć współpracę z YallaCars, jakie formalności są
+                potrzebne i jak wygląda proces wynajmu pojazdu.
+            </p>
+
+            {% partial 'utils/button.htm' type="link" version="primary" link="/" body %} Dowiedz się więcej {%
+            endpartial %}
+
+        </div>
+        <div class="accordion grid gap-4 w-full ">
+            {% for item in category_1 %}
+            <input type="radio" id="acc1_{{loop.index}}" name="acc1" />
+            <div class="accordion-item border-b border-grey-500">
+                <label for="acc1_{{loop.index}}" class="accordion-title lagusans cursor-pointer flex items-center">
+                    <p class="flex-1 text-lg font-medium">{{item.title}}</p>
+                    <svg width="56" height="57" viewBox="0 0 56 57" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="ml-auto acccordion-icon">
+                        <rect y="0.5" width="56" height="56" rx="28" fill="white" fill-opacity="0.1" />
+                        <g clip-path="url(#clip0_614_5614)">
+                            <path d="M35.9206 20.5204L20.0206 36.4204" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M35.2234 36.7741L36.2091 21.2941C36.218 21.1525 36.1966 21.0107 36.1465 20.878C36.0963 20.7453 36.0185 20.6247 35.9181 20.5244C35.8178 20.4241 35.6973 20.3463 35.5646 20.2961C35.4319 20.2459 35.29 20.2246 35.1484 20.2335L19.667 21.2178"
+                                stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_614_5614">
+                                <rect width="24" height="24" fill="white"
+                                    transform="translate(11 28.4705) rotate(-45)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </label>
+                <label for="acc_close" class="accordion-close h-[80px] cursor-pointer"></label>
+                <div class="accordion-content  pt-4 pr-8 lg:pr-16">
+                    <p class="lg:text-lg text-white/80">{{item.description}}</p>
+                </div>
+            </div>
+            {% endfor %}
+            <input id="acc_close" type="radio" name="acc1" />
+        </div>
+    </div>
+</section>

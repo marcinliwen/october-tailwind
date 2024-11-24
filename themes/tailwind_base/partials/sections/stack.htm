@@ -1,0 +1,74 @@
+{% set stack = [
+{
+title: "Legalnie i bez stresu",
+text: "Nasze samochody mają wszystkie niezbędne licencje, dzięki czemu możesz bez
+problemu pracować w Warszawie i okolicznych gminach, a także w innych miastach, jak Lublin, Kraków czy Łódź.",
+link:'/'
+},
+{
+title: "Karty paliwowe i stacja zawsze pod ręką",
+text: "Dzięki kartom paliwowym Orlen i BP masz zniżki na paliwo oraz wygodny dostęp do zakupów na stacjach – od
+jedzenia, przez napoje, aż po niezbędne środki eksploatacyjne.",
+link:'/'
+},
+{
+title: "Wsparcie w legalizacji pobytu i pracy",
+text: "Pomagamy załatwić kartę pobytu, polskie prawo jazdy oraz zezwolenie na pracę, byś mógł legalnie działać w
+Polsce.",
+link:'/'
+},
+{
+title: "Wypłaty wtedy, kiedy potrzebujesz",
+text: "Oferujemy elastyczne terminy wypłat – możesz wybierać między codziennymi a cotygodniowymi przelewami, by zawsze
+mieć dostęp do swoich zarobków.",
+link:'/'
+},
+]
+%}
+
+<section class="py-10">
+    <div class="container">
+        <h2 class="mb-2">Dlaczego <span class="font-semibold">kierowcy wybierają</span> YallaCars?</h2>
+        <h3 class="mb-10">Poznaj nasze korzyści</h3>
+
+        <div class="zeroAccordion">
+            {% for item in stack %}
+            <div
+                class="r t-rec uc-slide absolute stack-item z-{{loop.index}} {{ loop.index > 1 ? '' }} py-10 px-8 lg:pt-8 lg:pr-10 lg:pl-20 lg:pb-16 rounded-[40px] {{ loop.index == 1 ? 'bg-[#88888F]  text-white' }} {{ loop.index == 2 ? 'bg-[#666770] text-white' }} {{ loop.index == 3 ? 'bg-[#353535] text-white' }} {{ loop.index == 4 ? 'bg-[#24EA37] text-black' }}">
+                <div for="stack_{{loop.index}}" class=" flex flex-wrap lg:flex-nowrap items-center mb-20 lg:gap-8 ">
+                    <h3 class="max-w-[calc(100%_-_56px)] lg:max-w-[292px] w-full ">{{item.title}}</h3>
+                    <div class="stack-arrow h-[56px] w-[56px] min-w-[56px] rounded-full flex justify-center items-center bg-white/10 lg:order-1 cursor-pointer">
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" class="{{loop.index == 4 ? 'rotate-[90deg]'}}">
+                            <g clip-path="url(#clip0_703_2006)">
+                                <path d="M24.9205 9.02056L9.02051 24.9206" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M24.2233 25.2741L25.209 9.79411C25.2179 9.65251 25.1966 9.51065 25.1464 9.37793C25.0963 9.24522 25.0184 9.1247 24.9181 9.02438C24.8178 8.92406 24.6973 8.84623 24.5646 8.79607C24.4319 8.74591 24.29 8.72457 24.1484 8.73345L8.66699 9.71774"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_703_2006">
+                                    <rect width="24" height="24" fill="white"
+                                        transform="translate(0 16.9706) rotate(-45)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class=" mt-8 lg:mt-0 ">
+                        <p class="big">{{item.text}}</p>
+
+                    </div>
+
+                </div>
+
+                <div class="flex lg:gap-8">
+                    <div class="lg:max-w-[292px] lg:w-full "></div>
+                    {% partial 'utils/button.htm' version="tertiary" type="link" classes="" body noArrow="true" %}
+                    Dowiedz się więcej
+                    {% endpartial %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
